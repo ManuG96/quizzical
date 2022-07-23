@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root{
+  --grey-color: #FCFCFC;
+  --white-color: #FFF;
+  --dark-blue-color: #252D4A;
+  --blue-color: #234668;
+  --light-blue-color: #555E7D;
+  --good-color: #2F922F;
+  --bad-color: #FF3333;
+  --time-color: #FCBF3D;
+}
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  margin: 0;
+  color: var(--white-color);
+  background-color: var(--grey-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.app {
+  background-color: var(--dark-blue-color);
+  max-width: 650px;
+  min-width: 550px;
+  height: min-content;
+  min-height: 250px;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: space-between;
+  gap: 5%;
+}
+
+/* PREGUNTAS */
+.lado-izquierdo {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.pregunta-numero {
+  margin-bottom: 20px;
+}
+
+.pregunta-numero span {
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.pregunta-titulo {
+  margin-bottom: 12px;
+}
+
+.lado-derecho {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+/* FINALIZADO */
+.juego-terminado {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 24px;
+  align-items: center;
+}
+
+/* GRAL */
+button {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--white-color);
+  background-color: var(--dark-blue-color);
+  border-radius: 15px;
+  display: flex;
+  padding: 5px;
+  justify-content: flex-start;
+  align-items: center;
+  border: 5px solid var(--blue-color);
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.tiempo-restante {
+  font-size: 14px;
+  color: var(--time-color);
+  margin-bottom: 20px;
+}
+
+.correct,
+.correct:hover {
+  background-color: var(--good-color);
+}
+
+.incorrect,
+.incorrect:hover {
+  background-color: var(--bad-color);
+}
+
+.btns-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+button:hover {
+  background-color: var(--blue-color);
+}
+
+button[disabled] {
+  background-color: var(--light-blue-color);
+  color: var(--white-color);
+  cursor: not-allowed;
+}
+
+button:focus {
+  outline: none;
+}
+
+button svg {
+  margin-right: 5px;
+}
